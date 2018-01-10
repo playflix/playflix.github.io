@@ -15,7 +15,7 @@ $(function () {
 	var hash, imdb, magnet, title, rating, poster, genre, background;	
 	// DATASET
 
-	var proxy = "fuckcors";
+	var proxy = "drysierra94326";
 
 	switch (proxy) {
 		case "crossorigin":			proxy = "http://crossorigin.me/"; break;
@@ -47,7 +47,7 @@ $(function () {
 	console.log("proxy: " + proxy);
 	
 	var protocol = "http://";	
-	var provider = "ytsam";
+	var provider = "ytsag";
 
 	$("#movies_navbar").click(function() {
   		provider = "ytsis";
