@@ -15,7 +15,7 @@ $(function () {
 	var hash, imdb, magnet, title, rating, poster, genre, background;	
 	// DATASET
 
-	var proxy = "fuckcors";
+	var proxy = "none";
 
 	switch (proxy) {
 		case "crossorigin":			proxy = "http://crossorigin.me/"; break;
@@ -34,7 +34,7 @@ $(function () {
 		case "corshyooru": 			proxy = "http://cors.hyoo.ru/"; break;
 		case "cors4js": 			proxy = "https://cors4js.appspot.com/?url="; break;
 		case "fuckcors": 			proxy = "http://fuck-cors.com/?url="; break;
-		case "proxysauce": 			proxy = "https://proxy-sauce.glitch.me/"; break;			
+		case "proxysauce": 			proxy = "https://proxy-sauce.glitch.me/"; break;
 		// http://goxcors.appspot.com/			
 		// https://cors-proxy.taskcluster.net
 		// http://jsonp.herokuapp.com/
