@@ -48,7 +48,7 @@ $(function () {
 	console.log("proxy: " + proxy);
 	
 	var protocol = "http://";	
-	var provider = "torrentsapi";
+	var provider = "ytsag";
 
 	$("#movies_navbar").click(function() {
   		provider = "ytsis";
