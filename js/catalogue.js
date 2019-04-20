@@ -192,7 +192,7 @@ $(function () {
 			// JSON DATA
 			$.each(json_data, function (i, item) {
 				hash = item.torrents[0].hash; 	imdb = item.imdb_code; 	magnet = "magnet:?xt=urn:btih:"+hash+"&dn="+escape(item.title)+trackers; 	title = item.title; 			rating = item.rating; 		poster = item.medium_cover_image; 	genre = item.genres[0]; background = item.background_image; 	content_value = item.id;
-				catalogue (hash, imdb, magnet, title, rating, poster, genre, background, content_value); // api_url, provider, proxy											
+				catalogue(hash, imdb, magnet, title, rating, poster, genre, background, api_url, provider, proxy, content_value); // api_url, provider, proxy											
 				i++;				
 			});	
 			// Pagination | Infinite Scrolling
@@ -253,7 +253,7 @@ $(function () {
 					case "butter": 				hash = ""; 						imdb = item.ImdbCode; 	magnet = item.TorrentUrl; 													title = item.MovieTitleClean; 	rating = item.MovieRating; 	poster = item.CoverImage; 			genre = ""; 			background = item.CoverImage; 			content_value = ""; break;
 					case "torrentsapishows": 	hash = ""; 						imdb = item.imdb; 		magnet = ""; 																title = item.title; 		  	rating = item.rating; 		poster = item.poster_med; 			genre = item.genres[0]; background = item.poster_big; 			content_value = ""; break;
 				}
-				catalogue (hash, imdb, magnet, title, rating, poster, background, api_url, provider, proxy, content_value); // genre, 												
+				catalogue(hash, imdb, magnet, title, rating, poster, genre, background, api_url, provider, proxy, content_value); // api_url, provider, proxy											
 				// #ToDo make the numbers by bootstrap columns and document witdh!
 				var moviesXrow = 5;
 				if (i % moviesXrow == 0 )  {
