@@ -44,8 +44,6 @@ $(function () {
 		// http://corsy.rs.af.cm/?get=
 		// https://crossproxy.me/
 	}
-
-	console.log("proxy: " + proxy);
 	
 	var protocol = "http://";	
 	var provider = "ytsag";
@@ -149,12 +147,7 @@ $(function () {
 		var page = page_key+page_value;
 
 		var api_url = proxy+protocol+endpoint+page+parameters; // proxy+protocol+endpoint+page+parameters;
-		
-		console.log("api_url: "+api_url);
-		
-		
-		
-		
+
 		// #ToDo: Search functions
 		
 		/*
@@ -166,7 +159,6 @@ $(function () {
 			    if(e.keyCode == 13)
 			    {
 			      $(this).trigger("enterPress");
-			      console.log("algo");
 			    }
 			})
 		    });  
@@ -257,12 +249,9 @@ $(function () {
 				// #ToDo make the numbers by bootstrap columns and document witdh!
 				var moviesXrow = 5;
 				if (i % moviesXrow == 0 )  {
-					console.log("SI es multiplo de 5");
 					$('#movies').append("<div></div>");
 				}
-				else {
-					console.log("NO es multiplo de 5");
-				}
+				else {}
 				i++;				
 			});	
 			// Pagination | Infinite Scrolling
