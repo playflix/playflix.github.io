@@ -55,8 +55,6 @@ $(function () {
 	var pageToSave = JSON.stringify(page_value);
 	localStorage.setItem("pagina", pageToSave);
   		loadMore();
-  		closeThis_detalle();
-  		unscrollDetails();
 	});	
 	$("#tvshow_navbar").click(function() {
   		provider = "eztv_popcorntimews";
@@ -65,8 +63,6 @@ $(function () {
 	var pageToSave = JSON.stringify(page_value);
 	localStorage.setItem("pagina", pageToSave);
   		loadMore();
-  		closeThis_detalle();
-  		unscrollDetails();  		
 	});
 	$("#anime_navbar").click(function() {
   		provider = "animetorrentsapi";
@@ -75,8 +71,6 @@ $(function () {
 	var pageToSave = JSON.stringify(page_value);
 	localStorage.setItem("pagina", pageToSave);
   		loadMore();
-  		closeThis_detalle();
-  		unscrollDetails();  		
 	});
 	$("#porn_navbar").click(function() {
   		provider = "apiprivatetorrents";
@@ -85,8 +79,6 @@ $(function () {
 	var pageToSave = JSON.stringify(page_value);
 	localStorage.setItem("pagina", pageToSave);
   		loadMore();
-  		closeThis_detalle();
-  		unscrollDetails();  		
 	});	
 
 
