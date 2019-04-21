@@ -1,8 +1,8 @@
 $(function () {
 	// var tor_url = // ".link .city .to .cab .glass" #ToDo
 
-	var trackers = "&tr=udp:\/\/open.demonii.com:1337\/announce&tr=http:\/\/tracker.trackerfix.com\/announce&tr=udp:\/\/9.rarbg.to:2710&tr=udp:\/\/9.rarbg.me:2710&tr=udp:\/\/exodus.desync.com:6969&tr=udp:\/\/tracker.coppersurfer.tk:6969&tr=udp:\/\/tracker.leechers-paradise.org:6969&tr=udp:\/\/tracker.openbittorrent.com:80&tr=udp:\/\/glotorrents.pw:6969\/announce&tr=udp:\/\/tracker.opentrackr.org:1337\/announce&tr=udp:\/\/torrent.gresille.org:80\/announce&tr=udp:\/\/p4p.arenabg.com:1337&tr=udp:\/\/tracker.internetwarriors.net:1337&tr=http:\/\/www.siambt.com\/announce.php&tr=http:\/\/bttracker.crunchbanglinux.org:6969\/announce&tr=http:\/\/www.eddie4.nl:6969\/announce&tr=http:\/\/mgtracker.org:2710\/announce";
-
+	var trackers = "&tr=udp:\/\/open.demonii.com:1337\/announce&tr=http:\/\/tracker.trackerfix.com\/announce&tr=udp:\/\/9.rarbg.to:2710&tr=udp:\/\/9.rarbg.me:2710&tr=udp:\/\/exodus.desync.com:6969&tr=udp:\/\/tracker.coppersurfer.tk:6969&tr=udp:\/\/tracker.leechers-paradise.org:6969&tr=udp:\/\/tracker.openbittorrent.com:80&tr=udp:\/\/glotorrents.pw:6969\/announce&tr=udp:\/\/tracker.opentrackr.org:1337\/announce&tr=udp:\/\/torrent.gresille.org:80\/announce&tr=udp:\/\/p4p.arenabg.com:1337&tr=udp:\/\/tracker.internetwarriors.net:1337&tr=http:\/\/www.siambt.com\/announce.php&tr=http:\/\/bttracker.crunchbanglinux.org:6969\/announce&tr=http:\/\/www.eddie4.nl:6969\/announce&tr=http:\/\/mgtracker.org:2710\/announce&tr=wss:\/\/tracker.btorrent.xyz&tr=wss:\/\/tracker.fastcast.nz&tr=wss:\/\/tracker.openwebtorrent.com";
+	
 	// #ANIME 	http://open.nyaatorrents.info:6544/announce
 
 	// Pagination | Infinite Scrolling
@@ -18,31 +18,35 @@ $(function () {
 	var proxy = "corsio";
 
 	switch (proxy) {
-		case "crossorigin":			proxy = "http://crossorigin.me/"; break;
-		case "corsproxy": 			proxy = "http://cors-proxy.htmldriven.com/?url="; break; // necesita parsearse
+		case "crossorigin":					proxy = "http://crossorigin.me/"; break;
+		case "corsproxy": 					proxy = "http://cors-proxy.htmldriven.com/?url="; break; // necesita parsearse
 		case "whateverorigin": 			proxy = "http://www.whateverorigin.org/get?url="; break; // necesita parsearse // &callback=?
-		case "none": 				proxy = ""; break;
-		case "corsanywhere": 			proxy = ""; // https://jsfiddle.net/Ln47kyt2/3/	// FORK https://galvanize-cors-proxy.herokuapp.com/
-		case "corsio": 				proxy = "https://cors.io/?"; break;
+		case "none": 								proxy = ""; break;
+		case "corsanywhere": 				proxy = "https://cors-anywhere.herokuapp.com/";
+		case "corsio": 							proxy = "https://cors.io/?"; break;
 		case "drysierra94326": 			proxy = "http://dry-sierra-94326.herokuapp.com/"; break;
-		case "thingproxy": 			proxy = "https://thingproxy.freeboard.io/fetch/"; break;
-		case "corsnowsh": 			proxy = "https://cors.now.sh/";	break;
+		case "thingproxy": 					proxy = "https://thingproxy.freeboard.io/fetch/"; break;
+		case "corsnowsh": 					proxy = "https://cors.now.sh/";	break;
 		case "freecorsproxy": 			proxy = "https://free-cors-proxy.herokuapp.com"; break;
-		case "corsproxyourbuildo": 		proxy = "https://corsproxy.our.buildo.io"; break;
-		case "corsifyme": 			proxy = "http://www.corsify.me/"; break;
-		case "gobetween": 			proxy = "http://gobetween.oklabs.org/pipe/"; break;
-		case "corshyooru": 			proxy = "http://cors.hyoo.ru/"; break;
-		case "cors4js": 			proxy = "https://cors4js.appspot.com/?url="; break;
-		case "fuckcors": 			proxy = "http://fuck-cors.com/?url="; break;
-		case "proxysauce": 			proxy = "https://proxy-sauce.glitch.me/"; break;
+		case "corsproxyourbuildo": 	proxy = "https://corsproxy.our.buildo.io"; break;
+		case "corsifyme": 					proxy = "http://www.corsify.me/"; break;
+		case "gobetween": 					proxy = "http://gobetween.oklabs.org/pipe/"; break;
+		case "corshyooru": 					proxy = "http://cors.hyoo.ru/"; break;
+		case "cors4js": 						proxy = "https://cors4js.appspot.com/?url="; break;
+		case "fuckcors": 						proxy = "http://fuck-cors.com/?url="; break;
+		case "proxysauce": 					proxy = "https://proxy-sauce.glitch.me/"; break;
 		case "corsproxydotcom": 		proxy = "http://www.corsproxy.com/"; break;			
-		// http://goxcors.appspot.com/			
-		// https://cors-proxy.taskcluster.net
-		// http://jsonp.herokuapp.com/
-		// http://anyorigin.com/go/?url=
+		case "goxcors": 						proxy = "http://goxcors.appspot.com/"; break;
+		case "cors-proxy": 					proxy = "https://cors-proxy.taskcluster.net"; break;
+		case "jsonp": 							proxy = "http://jsonp.herokuapp.com/"; break;
+		case "anyorigin": 					proxy = "http://anyorigin.com/go/?url="; break;
+		case "corsy": 							proxy = "http://corsy.rs.af.cm/?get="; break;
+		case "crossproxy": 					proxy = "https://crossproxy.me/"; break;
+		case "galvanize-cors": 			proxy = "https://galvanize-cors-proxy.herokuapp.com/"; break;		
+
+		// https://www.test-cors.org/
 		// https://jsfiddle.net/1d8cwqo0/1/
-		// http://corsy.rs.af.cm/?get=
-		// https://crossproxy.me/
+		// https://jsfiddle.net/Ln47kyt2/3/
 	}
 	
 	var protocol = "http://";	
@@ -427,5 +431,40 @@ http://tracker.publicbt.com:80/announceUDP	80	PublicBitTorrent
 http://tracker.publicbt.com:6969/announceUDP	6969	PublicBitTorrent
 udp://tracker.x4w.co:6969/announceUDP	6969	x4w.co
 http://tracker.x4w.co:6969/announceUDP	6969	x4w.co
+
+*/
+
+
+/*
+
+ var createCORSRequest = function(method, url) {
+  var xhr = new XMLHttpRequest();
+  if ("withCredentials" in xhr) {
+    // Most browsers.
+    xhr.open(method, url, true);
+  } else if (typeof XDomainRequest != "undefined") {
+    // IE8 & IE9
+    xhr = new XDomainRequest();
+    xhr.open(method, url);
+  } else {
+    // CORS not supported.
+    xhr = null;
+  }
+  return xhr;
+};
+
+var url = 'https://yts.am/api/v2/list_movies.json?&page=1&sort_by=seeds&quality=720p&limit=24';
+var method = 'GET';
+var xhr = createCORSRequest(method, url);
+
+xhr.onload = function() {
+  // Success code goes here.
+};
+
+xhr.onerror = function() {
+  // Error code goes here.
+};
+
+xhr.send();
 
 */
