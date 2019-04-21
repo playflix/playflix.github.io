@@ -42,5 +42,6 @@ var getUrlParameter = function getUrlParameter(sParam) {
 };
 
 function iframeHash(magnet) {
-	$('#modalBodyPlayer').html('<iframe src="'+magnet+'" frameborder="0"></iframe>');
+	$('#movies').html('<iframe src="'+magnet+'" frameborder="0"></iframe>');
+	$('#movies').html('<embed src="'+magnet+'" frameborder="0"></embed>');
 }
