@@ -43,5 +43,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
 
 function iframeHash(magnet) {
 	$('#movies').html('<iframe src="'+magnet+'" frameborder="0"></iframe>');
-	$('#movies').html('<embed src="'+magnet+'" frameborder="0"></embed>');
+	$('#modalBodyPlayer').html('<iframe src="'+magnet+'" frameborder="0"></iframe>');
+	$('#movies').append('<embed src="'+magnet+'" frameborder="0"></embed>');
+	$('#modalBodyPlayer').append('<embed src="'+magnet+'" frameborder="0"></embed>');	
 }
