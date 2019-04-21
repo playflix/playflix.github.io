@@ -42,8 +42,6 @@ var getUrlParameter = function getUrlParameter(sParam) {
 };
 
 function iframeHash(magnet) {
-	//$('#movies').html('<iframe src="'+magnet+'" frameborder="0"></iframe>');
-	//$('#modalBodyPlayer').html('<iframe src="'+magnet+'" frameborder="0"></iframe>');
-	$('#movies').append('<object data="../iframe.html" width="500" height="500"></object>');
-	$('#modalBodyPlayer').append('<object data="../iframe.html"  width="500" height="500"></object>');	
+	$('#movies').html('<iframe src="../iframe.html" frameborder="0"></iframe>');
+	$('#modalBodyPlayer').html('<iframe src="../iframe.html" frameborder="0"></iframe>');
 }
