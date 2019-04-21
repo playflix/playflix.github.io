@@ -5,15 +5,7 @@ var firstScriptTag = document.getElementsByTagName('script')[0];
 var tv,
 		playerDefaults = {autoplay: 0, autohide: 1, modestbranding: 0, rel: 0, showinfo: 0, controls: 0, disablekb: 1, enablejsapi: 0, iv_load_policy: 3};
 var vid = [
-			{'videoId': 'EmnSm_d2ll4', 'startSeconds': 0, 'endSeconds': 276, 'suggestedQuality': 'hd720'}//,
-			/*
-			{'videoId': 'F4gJsKZvqE4', 'startSeconds': 0, 'endSeconds': 148, 'suggestedQuality': 'hd720'},
-			{'videoId': 'RfJgT89hEME', 'startSeconds': 0, 'endSeconds': 160, 'suggestedQuality': 'hd720'},
-			{'videoId': 'ViuDsy7yb8M', 'startSeconds': 0, 'endSeconds': 139, 'suggestedQuality': 'hd720'},
-			{'videoId': 'gLJdzky63BA', 'startSeconds': 6, 'endSeconds': 152, 'suggestedQuality': 'hd720'},
-			{'videoId': 'deSRpSn8Pyk', 'startSeconds': 0, 'endSeconds': 121, 'suggestedQuality': 'hd720'},
-			{'videoId': 'QEAW49qjBtc', 'startSeconds': 2, 'endSeconds': 30, 'suggestedQuality': 'hd720'}
-			*/
+			{'videoId': 'EmnSm_d2ll4', 'startSeconds': 0, 'endSeconds': 276, 'suggestedQuality': 'hd720'}
 		],
 		randomvid = Math.floor(Math.random() * (vid.length - 1 + 1));
 
