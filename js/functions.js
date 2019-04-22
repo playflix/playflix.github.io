@@ -4,7 +4,7 @@ $(document).ready(function() {
 	}, 5000);
 });
 function hoverHash(imdb) {
-	$.get("http://www.omdbapi.com/?i="+imdb+"&plot=full&r=json&apikey=bd31da15", function (data) {
+	$.get("https://www.omdbapi.com/?i="+imdb+"&plot=full&r=json&apikey=bd31da15", function (data) {
 		movie_rating = Math.round(data.imdbRating);
 		movie_rating_star = '<i class="fas fa-star"></i>';
 		movie_rating_star_empty = '<i class="far fa-star"></i>';
