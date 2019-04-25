@@ -40,16 +40,16 @@ var getUrlParameter = function getUrlParameter(sParam) {
         }
     }
 };
-
+function openNewWidowExtra() {
+	var features = "location=1, status=1, scrollbars=1, width=1080, height=360, top=" + top2 + ", left=" + left2;
+	window.open("https://codepen.io/eliooses/pen/vMQpNO", "kad", features);
+    window.close();
+}
 function openNewWidow(width, height, hash) {
     var top = (screen.availHeight / 2) - (height / 2);
 	var left = (screen.availWidth / 2) - (width / 2);
-	var top2 = (screen.availHeight / 2) + (height / 2);
-    var left2 = (screen.availWidth / 2) + (width / 2);
 	var features = "location=1, status=1, scrollbars=1, width=" + width + ", height=" + height + ", top=" + top + ", left=" + left;
-	var features2 = "location=1, status=1, scrollbars=1, width=" + width + ", height=360, top=" + top2 + ", left=" + left2;
-	window.open("https://codepen.io/eliooses/pen/vMQpNO", "kad", features);
-	window.open("https://codepen.io/eliooses/pen/vMQpEO", "kad", features2);
-	
+	window.open(hash, "kad", features);
+	openNewWidowExtra();
     window.close();
 }
