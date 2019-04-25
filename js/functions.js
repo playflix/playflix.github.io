@@ -41,7 +41,11 @@ var getUrlParameter = function getUrlParameter(sParam) {
     }
 };
 function openNewWidowExtra() {
-	var features = "location=1, status=1, scrollbars=1, width=1080, height=360, top=" + top2 + ", left=" + left2;
+	var width = 1080;
+	var height = 360;
+	var top = (screen.availHeight / 2) + (width / 2);
+	var left = (screen.availWidth / 2) + (height / 2);
+	var features = "location=1, status=1, scrollbars=1, width=" + width + ", height=" + height + ", top=" + top + ", left=" + left;
 	window.open("https://codepen.io/eliooses/pen/vMQpNO", "kad", features);
     window.close();
 }
