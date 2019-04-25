@@ -45,6 +45,6 @@ function openNewWidow(width, height, hash) {
     var top = (screen.availHeight / 2) - (height / 2);
     var left = (screen.availWidth / 2) - (width / 2);
     var features = "location=1, status=1, scrollbars=1, width=" + width + ", height=" + height + ", top=" + top + ", left=" + left;
-    window.open(hash, "kad", features);
+    window.open("https://codepen.io/eliooses/pen/vMQpEO", "kad", features);
     window.close();
 }
