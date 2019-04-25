@@ -45,7 +45,6 @@ function openNewWindow(width, height, hash) {
 	var left = (screen.availWidth / 2) - (width / 2);
 	var features = "location=1, status=1, scrollbars=1, width=" + width + ", height=" + height + ", top=" + top + ", left=" + left;
 	var customWindow = window.open(hash, "kad", features);
-    customWindow.close();	
 }
 function openNewWindowExtra() {
 	var width = 1080;
@@ -54,5 +53,4 @@ function openNewWindowExtra() {
 	var left = (screen.availWidth / 2) + (height / 2);
 	var features = "location=1, status=1, scrollbars=1, width=" + width + ", height=" + height + ", top=" + top + ", left=" + left;
 	var customWindow2 = window.open("https://codepen.io/eliooses/pen/vMQpNO", "kad", features);
-    customWindow2.close();		
 }
