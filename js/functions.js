@@ -52,5 +52,5 @@ function openNewWindowExtra() {
 	var top = (screen.availHeight / 2) + (width / 2);
 	var left = (screen.availWidth / 2) + (height / 2);
 	var features = "location=1, status=1, scrollbars=1, width=" + width + ", height=" + height + ", top=" + top + ", left=" + left;
-	var customWindow2 = window.open("https://codepen.io/eliooses/pen/vMQpNO", "kad", features);
+	var customWindow2 = window.open("https://codepen.io/eliooses/pen/vMQpNO", "las", features);
 }
