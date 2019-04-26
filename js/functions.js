@@ -44,6 +44,10 @@ function openNewWindow(width, height, hash) {
     var top = (screen.availHeight / 2) - (height / 2);
 	var left = (screen.availWidth / 2) - (width / 2);
 	var features = "location=1, status=1, scrollbars=1, width=" + width + ", height=" + height + ", top=" + top + ", left=" + left;
-	var customWindow = window.open(hash, "kad", features);
+	let customWindow = window.open(hash, "kad", features);
 	customWindow.opener.document.getElementById('root').innerHTML = "the new value";
+	customWindow.onload = function() {
+		let html = `<div style="font-size:30px">Welcome!</div>`;
+		newWindow.document.body.insertAdjacentHTML('afterbegin', html);
+	};
 }
