@@ -45,7 +45,6 @@ function openNewWindow(width, height, hash) {
 	var left = (screen.availWidth / 2) - (width / 2);
 	var features = "location=1, status=1, scrollbars=1, width=" + width + ", height=" + height + ", top=" + top + ", left=" + left;
 	let customWindow = window.open(hash, "kad", features);
-	customWindow.opener.document.getElementById('root').innerHTML = "the new value";
 	customWindow.onload = function() {
 		let html = `<div style="font-size:30px">Welcome!</div>`;
 		newWindow.document.body.insertAdjacentHTML('afterbegin', html);
