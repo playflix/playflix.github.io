@@ -42,8 +42,8 @@ $(function () {
 		case "anyorigin": 					proxy = "http://anyorigin.com/go/?url="; break;
 		case "corsy": 							proxy = "http://corsy.rs.af.cm/?get="; break;
 		case "crossproxy": 					proxy = "https://crossproxy.me/"; break;
-		case "galvanize-cors": 			proxy = "https://galvanize-cors-proxy.herokuapp.com/"; break;		
-
+		case "galvanize-cors": 			proxy = "https://galvanize-cors-proxy.herokuapp.com/"; break;
+		case "cors-buster": 			proxy = "https://cors-buster.now.sh/?href="; break;
 		// https://www.test-cors.org/
 		// https://jsfiddle.net/1d8cwqo0/1/
 		// https://jsfiddle.net/Ln47kyt2/3/
