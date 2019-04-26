@@ -47,6 +47,6 @@ function openNewWindow(width, height, hash) {
 	let customWindow = window.open(hash, "kad", features);
 	customWindow.onload = function() {
 		let html = `<div style="font-size:30px">Welcome!</div>`;
-		newWindow.document.body.insertAdjacentHTML('afterbegin', html);
-	};
+		newWindow.document.body.innerHtml(html);
+	};	
 }
