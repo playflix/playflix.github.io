@@ -21,30 +21,18 @@ function catalogue(hash, imdb, magnet, title, rating, poster, genre, background,
 	html+='<div id="movie-box-'+'" class="movie-box movie-box-'+genre+' col-lg-2 col-md-3 col-sm-6 col-xs-12" style="position:relative;float:left;">';
 	html+='<div style="width: 100%; height: 330px; position: absolute;left: 0px; top: 0px; -webkit-filter: blur(3px); -moz-filter: blur(3px); -o-filter: blur(3px); -ms-filter: blur(3px); filter: blur(3px); background-image:url('+background+'); background-position: center; background-size: cover;  background-repeat: no-repeat; -webkit-box-shadow: inset 0px 0px 30px 30px rgba(0, 0, 0, 1); -moz-box-shadow: inset 0px 0px 30px 30px rgba(0, 0, 0, 1); box-shadow: inset 0px 0px 30px 30px rgba(0, 0, 0, 1);"></div>';
 	// html+='<a href="'+magnet+'" target="_blank">';
-	html+='<img id="img-movie-box-'+hash+'" class="hover-luz" title="'+title+'" alt="'+title+'" src="'+poster+'" onclick="openNewWidow(1080, 720, &#39;'+magnet+'&#39;)" onmouseover="hoverHash(&#39;'+imdb+'&#39;)" onmouseout="outHash(&#39;'+imdb+'&#39;)"/>';
+	html+='<img id="img-movie-box-'+hash+'" class="hover-luz" title="'+title+'" alt="'+title+'" src="'+poster+'" onclick="openNewWindow(1080, 720, &#39;'+magnet+'&#39;)" onmouseover="hoverHash(&#39;'+imdb+'&#39;)" onmouseout="outHash(&#39;'+imdb+'&#39;)"/>';
 	html+='<div id="movie-rating-star-'+imdb+'" class="movie_rating_star"></div></div>';
 	// html+='</a>';
 	$('#movies').append(html);
 }
-var getUrlParameter = function getUrlParameter(sParam) {
-    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
-
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
-
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : sParameterName[1];
-        }
-    }
-};
-
-function openNewWidow(width, height, hash) {
+function openNewWindow(width, height, hash) {
     var top = (screen.availHeight / 2) - (height / 2);
-    var left = (screen.availWidth / 2) - (width / 2);
-    var features = "location=1, status=1, scrollbars=1, width=" + width + ", height=" + height + ", top=" + top + ", left=" + left;
-    window.open(hash, "kad", features);
-    window.close();
+	var left = (screen.availWidth / 2) - (width / 2);
+	var features = "location=1, status=1, scrollbars=1, width=" + width + ", height=" + height + ", top=" + top + ", left=" + left;
+	let customWindow = window.open(hash, "kad", features);
+	customWindow.onload = function() {
+		let html = `<div style="font-size:30px">Welcome!</div>`;
+		newWindow.document.body.innerHtml(html);
+	};	
 }

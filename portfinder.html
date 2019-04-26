@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+    </head>
+    <body>
+        <div id="player">
+
+        </div>
+        <script>           
+            var isAccessible = null;
+            var port = 52700;
+            function checkConnection() {
+                var url = "http://localhost:"+port;
+                $.ajax({
+                    url: url,
+                    type: "get",
+                    cache: false,
+                    dataType: 'jsonp',
+                    crossDomain: true,
+                    asynchronous: false,
+                    timeout: 50,
+                    complete : function(xhr) {
+                        if(xhr.status == "200") {
+                           isAccessible = true;
+                           $("body").css("background","#000");
+                        }
+                        else {
+                           isAccessible = false;
+                           return port++;
+                        }
+                    }
+               });
+            }
+            window.setInterval(function(){
+            // $(document).ready(function () {
+                checkConnection();
+            // });
+            }, 10);         
+        </script>
+    </body>
+</html>
